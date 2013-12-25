@@ -1,0 +1,54 @@
+@charset "utf-8";
+.panel{
+	width:500px;
+	border:2px solid #666;
+	background-color:#FFF;
+}
+
+.panel-fixed{
+	/*  这position: fixed;就是绝对定位了，right: 5px;距离右边5像素 . */
+	position: fixed; right: 5px; bottom: 5px; z-index: 5010;
+}
+.panel-head{
+	width:473px; 
+	padding: 5px 10px 5px 17px;
+	background-color: rgb(245, 245, 245);
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:rgb(221, 221, 221);
+	margin-bottom:20px;
+}
+.panel-head a{
+	font-family: arial,\5b8b\4f53,sans-serif;
+	opacity: 0.2;
+	margin-top: 2px;
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 18px;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	text-decoration: none;
+}
+.panel-body{
+	width:473px;margin-top:10px;margin-bottom:10px;
+}
+.panel-body-3-10{
+	width:30%; height:30px; float:left; background-color: #FFF; text-align: right;
+}
+.panel-body-7-10{
+	width:70%; height:30px; float:left; background-color: #FFF;
+}
+.panel-body-textarea{
+	height:75px;
+}
+.panel-body textarea{
+	width:240px;height:60px;
+}
+.panel-body-10{
+	width:100%; text-align: center;
+}
+.panel-foot{
+	width:100%; height:20px;clear: both;
+}
+
