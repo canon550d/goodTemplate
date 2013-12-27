@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>我的列表</title>
+<link rel="stylesheet" type="text/css" href="../css/sidebar.css"/>
+<link rel="stylesheet" type="text/css" href="../css/nav2.css"/>
+<link rel="stylesheet" type="text/css" href="../css/breadcrumbs.css"/>
+<link rel="stylesheet" type="text/css" href="../css/search.css"/>
+<style type="text/css">
+/*
+ * 凡是需要边框的地方使用border: 1px solid #E3E3E3;
+ */
+.container{position:relative;width:960px;margin:0 auto;}
+.nav-new{position:absolute;}
+.section{margin-left:154px;padding:0 0 0 10px;}
+body, html{width:100%;height:100%;font-size: 12px;margin:0;padding:0;}
+
+table{width:100%;border-collapse:collapse;}
+td,th{border: 1px solid #E3E3E3;height:30px;}
+
+
+.w155{width:155px;}
+.w58{width:58px;}
+.w127{width:127px;}
+.w130{width:130px;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-new">
+        <div style="background-image: url('../img/logo.jpg');height: 65px;"></div>
+        <div style="width:154px;height:73px;background: none repeat scroll 0 0 #F4F3EF;margin-bottom:1px;">
+          
+        </div>
+
+        <div style="width:154px;border-collapse: separate;border-spacing: 3px;">
+          <form class="required-validate clearfix" target="_blank" action="viewWorkBill.do" method="get">
+            <input class="submit" type="submit" name="B9" value="搜">
+            <input id="searchTXT" class="required validate-number length-min-18" type="text" onclick="javascript:if(this.value=='输入服务号搜索')this.value='';" value="输入服务号搜索" size="12" name="servNo">
+          </form>
+        </div>
+
+        <div style="width:154px;">
+          <dl class="nav nav-list"><!-- class="leftMenu" -->
+            <dt class="nav-title">菜单</dt>
+            <dd><a target="_self" href="addWorkBill.aspx">新建工单</a></dd>
+      
+            <dt class="nav-half-title">待处理</dt>
+            <dd><a target="_self" href="listTodo.do?v=view1&amp;showType=mima">非游戏帐号修复</a></dd>
+            <dd><a target="_self" href="listTodo.do?v=view1&amp;showType=huawu">话&nbsp;&nbsp;&nbsp;&nbsp;务</a></dd>
+            <dd><a target="_self" href="listTodo.do?v=view1&amp;showType=vipmail">VIP邮箱</a></dd>
+      
+            <dt class="nav-half-title">--</dt>
+            <dd><a target="_self" href="listTodo.do?v=myFollowView">我的工单</a></dd>
+            <dd><a target="_self" href="query.do">检&nbsp;&nbsp;索</a></dd>
+            <dd><a target="_self" href="stat.do">数据统计</a></dd>
+            <dd><a target="_self" href="adminMain.do">高级管理</a></dd>
+            <dd><a target="_self" href="feedBack.aspx">反馈管理</a></dd>
+            <dd><a target="_blank" href="reply_platform_index.aspx">快速回复</a></dd>
+            <dd><a target="_blank" href="extra/hc/index.jsp">VIP企业客户管理</a></dd>
+          </dl>
+
+          <dl class=" nav nav-list">
+            <dt class="nav-title">About</dt>
+            <dd><a href="history.html" target="_blank">更新历史</a></dd>
+            <dd><a href="faq.html" target="_blank">FAQ</a></dd>
+          </dl>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="crumbs"><a href="#">首页</a> &gt; <a href="#">我的工单</a> &gt; <a href="#">我锁定的工单</a> &gt; 话务工单</div>
+    </div>
+
+    <div class="section">
+        <div class="nav2">
+          <ul class="line1">
+            <li><a href="#">我创建的工单</a></li>
+            <li><a href="#">我参与的工单</a></li>
+            <li><a href="#" class="check">我锁定的工单</a></li>
+            <li><a href="#">我待跟进的工单</a></li>
+          </ul>
+          <div class="line2">
+            <a href="#">话务工单</a>
+            <a href="#">优先服务工单</a>
+            <a href="#">VIP邮箱</a>
+          </div>
+        </div>
+    </div>
+    <div class="section">
+      <table cellspacing="1" cellpadding="0" border="1">
+        <tr>
+          <th>请求类型</th>
+          <th >处理状态</th>
+          <th class="w127">帐号</th>
+          <th class="w130">创建人/创建时间</th>
+          <th class="w130">跟进人/处理时限</th>
+        </tr>
+        <tr>
+          <td>请求类型</td><td>无需答疑</td><td>abcdefghijkl@126.com</td>
+          <td>[管理员]<br/>2011-08-22 19:29 </td>
+          <td>[管理员]<br/>2011-08-23 18:00</td>
+        </tr>
+        <tr>
+          <td>请求类型</td><td>无需答疑</td><td>test@126.com</td>
+          <td>[管理员]<br/>2011-08-22 19:29 </td>
+          <td>[管理员]<br/>2011-08-23 18:00</td>
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+</body>
+</html>
