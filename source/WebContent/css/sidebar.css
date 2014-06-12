@@ -12,7 +12,7 @@
 .nav {background-color: #FFFFFF;border: 1px solid #E3E3E3;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;margin-bottom: 1px;min-height: 20px;list-style: none outside none;}
 .nav dd{line-height: 18px;margin-left: 0px;}/*内容*/
 .nav dd{color: #999999;}/*内容*/
-.nav dd a{display:block;padding: 6px 10px 6px 18px;}
+.nav dd a{display:block;padding: 6px 10px 6px 18px;text-decoration:none;color:black;}
 .nav dd a:hover{background:#F4F3EF; }
 
 .nav-list{margin-bottom: 10px;margin-top:0;}
