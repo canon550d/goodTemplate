@@ -11,17 +11,17 @@ body, html{width:100%;height:100%;font-size: 12px;margin:0;padding:0;}
 body{background-image:url("../img/bg.jpg");background-size:cover;}
 .container{position:relative;width:960px;margin:0 auto;}
 
-.nav-box{position:absolute;width:154px;}
+.nav-box{position:absolute;width:160px;}
 .section{margin-left:154px;padding:0 0 0 10px;}
 .section-box{height:400px;background: none repeat scroll 0 0 white;border-bottom:2px solid #F4F3EF;}
 
-.user{
-  padding:10px 0;background-color: #FFFFFF;border-left: 1px solid #E3E3E3;border-right: 1px solid #E3E3E3;height:auto;
-}
+.w154{width:154px;margin:0 auto;}
+.user{padding:10px 0;background-color: #FFFFFF;border-left: 1px solid #E3E3E3;border-right: 1px solid #E3E3E3;height:auto;}
 .user-head{width:100px;height:100px;margin:0 auto;}
 .user-name{width:100px;height:20px;margin:0 auto;margin-top:10px;}
 .user-logout{margin-left:10px;}
-.user img{margin:0 auto;}
+
+.logo{height: 31px;line-height: 31px;background: #fd7a7a;padding-left: 18px; font-size: 14px; font-weight: bold;color: #FFF;}
 </style>
 <script>
     $(document).ready(function(){
@@ -36,13 +36,13 @@ body{background-image:url("../img/bg.jpg");background-size:cover;}
     <div class="container">
         
         <div class="nav-box">
-            <div class="user">
+            <div class="user w154">
                 <div class="user-head"><img src="../img/heads.png"/></div>
                 <div class="user-name">铃响香馨<a href="#" class="user-logout">退出</a></div>
             </div>
-
-            <dl class=" nav nav-list"><!-- class="leftMenu" -->
-              <dt class="nav-title">世界杯A组的</dt>
+            <div class="logo">世界杯A组的</div>
+            <dl class=" nav nav-list w154"><!-- class="leftMenu" -->
+              <!-- dt class="nav-title">世界杯A组的</dt -->
               <dd><a target="_self" href="#">阿拉伯</a></dd>
         
               <dt class="nav-half-title">第三世界</dt>
