@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="goodTemplate" default="template" basedir=".">
+	<description>mima_system</description>
+	<property name="good.css" location="${basedir}/css" />
+	<property name="good.js" location="${basedir}/js" />
+
+	<target name="template">
+		<concat destfile="all.css">
+			<fileset dir="${good.css}" includes="*.css" />
+		</concat>
+		<replace file="all.css" value="">
+			<replacetoken>@charset "utf-8";</replacetoken>
+		</replace>
+	</target>
+</project>
