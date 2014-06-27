@@ -8,24 +8,25 @@
   <script>
     $(document).ready(function(){
         $(".close").click(function(){
-            $(".panel-body").toggle("normal");
+            $(".ssss").toggle("normal");
         });
     });
   </script>
 </head>
 <body>
 
-    <div id="toolbar" class="panel" >
-        <div class="panel-head"><a class="close" href="javascript:void(0);">×</a>工具栏</div>
-        <div class="panel-body">
-            <ul>
-                <li><div><b style="display:inline-block;width:40px;height:40px;background: url(img/icons.jpg) no-repeat -595px -215px;"></b>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
-                <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
-                <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
-            </ul>
-        </div>
-        <div class="panel-foot">浮在页面最右边的工具</div>
+    <div class="mui-mbar-tabs-mask">
+        <a href="#" class="close">Q</a>
+        <a href="#" class="close">Q</a>
     </div>
+    <div class="ssss" style="display:none;">
+        <ul>
+            <li><div><b style="display:inline-block;width:40px;height:40px;background: url(img/icons.jpg) no-repeat -595px -215px;"></b>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
+            <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
+            <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
+        </ul>
+    </div>
+
     <div class="toolbar">1</div>
     <div class="toolbar">2</div>
     <div class="toolbar">3</div>
