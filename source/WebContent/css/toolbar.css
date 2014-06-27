@@ -1,9 +1,36 @@
 @charset "utf-8";
 #toolbar{
-	right: 0px; top: 0px; position: fixed;
-	background-color:#f0f0f0;
+	right: 0px; top: 0px; bottom: 1px; position: fixed; z-index: 5010;
+	width: 35px;
+	background-color: #000;
 }
 
+.close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
+
+.workbill-search{
+	width: 240px;height: 736px;
+	top: 20px;right: 0px;position: fixed;  z-index: 5009;
+	overflow: hidden;
+	background: none repeat scroll 0% 0% #FAFAFA;
+	border:1px solid black;
+}
+.workbill-search ul{
+	margin:0;
+	padding:0;
+}
+.workbill-search li{
+	margin-left:8px;
+	margin-top:4px;
+	list-style-type:none;
+	height:80px;
+	border-bottom:1px dashed black;
+}
+
+
+/*
+ * 测试代码，没有实际使用的
+ * 
+ */
 .toolbar{
 	width:18px;
 	height:18px;
@@ -16,30 +43,3 @@
 	margin-top:-5px;
 	background-color:#CCCCCC;
 }
-
-.mui-mbar-tabs-mask {
-	position: fixed;  z-index: 5010;
-	/*position: absolute;*/
-	top: 1px;
-	bottom: 1px;
-	right: 0px;
-	width: 35px;
-	background-color: #000;
-}
-.close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
-.ssss{width: 240px;height: 736px;
-	position: fixed;  z-index: 5009;
-	top: 20px;right: 0px;
-	overflow: hidden;background: none repeat scroll 0% 0% #FAFAFA;border:1px solid black;}
-.ssss ul{
-	margin:0;
-	padding:0;
-}
-.ssss li{
-	margin-left:8px;
-	margin-top:4px;
-	list-style-type:none;
-	height:80px;
-	border-bottom:1px dashed black;
-}
-
