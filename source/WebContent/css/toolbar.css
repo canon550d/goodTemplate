@@ -1,11 +1,16 @@
 @charset "utf-8";
 #toolbar{
-	right: 0px; top: 0px; bottom: 1px; position: fixed; z-index: 5010;
+	right: 0px; top: 0px; bottom: 0px; position: fixed; z-index: 5010;
 	width: 35px;
 	background-color: #000;
 }
 
 .close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
+
+.xyTop, .xyBottom{background:white;display:block;width:33px;height:33px;position: fixed;right:1px;}
+.xyTop{bottom:35px;}
+.xyBottom{bottom:1px;}
+.xyTop img , .xyEnd img{width:33px;height:33px;}
 
 .workbill-search{
 	width: 240px;height: 736px;
