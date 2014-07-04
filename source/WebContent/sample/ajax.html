@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>查看</title>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#guanzhu").click(function(){
+		$.ajax({
+			dataType : "json",
+			url : "hello.html",
+			data : {'name':'2134'},
+			complete : function() {
+				console.log("正在搞定");
+			},
+			success : function(response) {
+				console.log("插入成功");
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+    <div>
+       <span>关注</span>
+       <input type="checkbox" name="black.keyword" /><label>帐号</label>
+       <input type="checkbox" name="black.keyword" /><label>图片上证件号</label>
+       <input type="checkbox" name="black.keyword" /><label>联系手机</label>
+       <input type="checkbox" name="black.keyword" /><label>联系邮箱</label>
+    </div>
+    <div>
+        <textarea name="black.message"></textarea>
+    </div>
+    <div>
+        <button type="button" id="guanzhu">确认关注</button>
+    </div>
+</body>
+</html>

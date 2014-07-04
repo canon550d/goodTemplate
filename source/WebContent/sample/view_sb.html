@@ -5,9 +5,9 @@
 
   <link rel="stylesheet" type="text/css" href="../css/reset.css" />
   <link rel="stylesheet" type="text/css" href="../css/text.css" />
-  <link rel="stylesheet" type="text/css" href="../css/960.css" />
+  <link rel="stylesheet" type="text/css" href="../css/960.customer.css" />
   <link rel="stylesheet" type="text/css" href="../css/sidebar.css" />
-  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/jquery-1.9.0.js"></script>
   <script>
     $(document).ready(function(){
         $(".close").click(function(){
@@ -15,6 +15,7 @@
         });
     });
   </script>
+
   <style type="text/css">
   .container_12,
   .container_16,
@@ -28,7 +29,8 @@
   }
 
   .container_16 {
-    background-image: url(../img/16_col.gif);
+    /*background-image: url(../img/16_col.gif);*/
+    background-image: url(../img/16_col.png);
   }
 
   .container_24 {
@@ -42,12 +44,12 @@
     position: fixed;  z-index: 5010;
     /*position: absolute;*/
     top: 1px;
-    bottom: 1px;
+    bottom: 0px;
     right: 0px;
     width: 35px;
     background-color: #000;
   }
-  .ssss{width: 240px;height: 736px;
+  .ssss{width: 230px;height: 736px;
     position: fixed;  z-index: 5009;
     top: 20px;right: 0px;
     overflow: hidden;background: none repeat scroll 0% 0% #FAFAFA;border:1px solid black;}
@@ -63,6 +65,12 @@
     border-bottom:1px dashed black;
   }
   .close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
+  .xyTop{background:white;display:block;width:33px;height:33px;position: fixed;bottom:35px;right:1px;}
+  .xyEnd{background:white;display:block;width:33px;height:33px;position: fixed;bottom:1px;right:1px;}
+  .xyTop img , .xyEnd img{width:33px;height:33px;}
+  
+  .xyPanelTitle{background-color: rgb(245, 245, 245);}
+  .xyPanelBody{background-color:white;}
 </style>
 </head>
 <body>
@@ -88,43 +96,42 @@
             </dl>
     </div>
     <div class="grid_13">
-            <div class="grid_3 alpha xyx-1">姓名</div>
-            <div class="grid_7 xyx-2">王大脚</div>
-            <div class="grid_3 omega xyx-3">&nbsp;</div>
-            <div class="clear"></div>
+        <a id="top"></a>
 
-            <div class="grid_3 alpha xyx-1">头像</div>
-            <div class="grid_7 xyx-2"><img src="../img/heads.png" /></div>
-            <div class="grid_3 omega xyx-3"><button>好看</button><button>太丑</button></div>
-            <div class="clear"></div>
+        <!-- /xy palce/ -->
+        <div class="grid_10 alpha omega xyPanelTitle">帐号基本信息</div>
+        <div class="clear"></div>
 
-            <div class="grid_3 alpha xyx-1">身高</div>
-            <div class="grid_5 xyx-2">170</div>
-            <div class="grid_5 omega xyx-3"><button>刚好</button><button>太高</button><button>太矮</button></div>
-            <div class="clear"></div>
+        <div class="grid_10 alpha xyPanelBody">
+            <table>
+                <tr><td>帐号:</td><td>ji***27</td></tr>
+                <tr><td>服务号:</td><td>1234566789012345678</td></tr>
+                <tr><td>近180天处理记录:</td><td>22</td></tr>
+            </table>
+        </div>
+        <div class="grid_3 omega">
+            <input type="checkbox">注册证件符合
+            <input type="checkbox">注册证件容错
+            <input type="checkbox">证件号符合
+        </div>
+        <div class="clear"></div>
+        <!-- /xy palce/ -->
 
-            <div class="grid_13 alpha omega">一二三四五六</div>
-            <div class="clear"></div>
-
-            <div class="grid_10 alpha">
-                <table>
-                    <tr><td>一二</td><td>xksklls</td></tr>
-                    <tr><td>一二三</td><td>12345678901234567</td></tr>
-                    <tr><td>一180三四五六七</td><td>12345678901234567</td></tr>
-                </table>
-            </div>
-            <div class="grid_3 omega">
-                <button>好看</button><button>太丑</button>
-            </div>
+        <a id="end"></a>
     </div>
     <div class="clear"></div>
 
     <div class="grid_16">
-            <p>123</p>
+        1111
     </div>
+    <div class="clear"></div>
   </div>
-  
-  <div class="mui-mbar-tabs-mask"><a href="#" class="close">Q</a></div>
+  <!-- 
+  <div class="mui-mbar-tabs-mask">
+    <a href="#" class="close">Q</a>
+    <a href="#top" class="xyTop"><img src="http://192.168.72.103/images/top.png"/></a>
+    <a href="#end" class="xyEnd"><img src="http://192.168.72.103/images/bottom.png"/></a>
+  </div> 
   <div class="ssss">
             <ul>
                 <li>
@@ -141,6 +148,6 @@
                 <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
                 <li><div>雪花啤酒 </div><div>价格：4块</div><div>产地：北京</div><div>口感清纯</div></li>
             </ul>
-  </div>
+  </div>-->
 </body>
 </html>
