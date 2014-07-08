@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>旋转图片</title>
+<script src="js/jquery-1.9.0.js"></script>
+<script type="text/javascript">
+var aid = 0;
+var rid;
+var name = "tb-rotating-";
+$(document).ready(function(){
+    $(".J_TurnRight").click(function(){
+        rid = aid;
+        aid++;
+        getIndex();
+        debug();
+        $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
+    });
+    $(".J_TurnLeft").click(function(){
+        rid = aid;
+        aid--;
+        getIndex();
+        debug();
+        $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
+        
+    });
+});
+function getIndex(){
+	if(aid > 3){
+		aid = 0;
+	}
+	if(aid < 0){
+		aid = 3;
+	}
+}
+
+function debug(){
+	$(".debug").append("<p>aid:"+aid+"</p>");
+}
+</script>
+<link rel="stylesheet" type="text/css" href="css/gallery.css" >
+<style type="text/css">
+.debug{position:fixed;right:0;top:0;width:50px;}
+</style>
+</head>
+<body>
+<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 400px;">
+    <div class="tb-r-photo-viewer-bar">
+        <a class="J_Hide" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-hide"></span>收起</a>
+        <a class="J_Open" target="_blank" href="../img/zheng.png"><span class="tb-r-photo-icon tb-r-photo-icon-open"></span>原图</a>
+        <a class="J_TurnLeft" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-turnleft"></span>向左转</a>
+        <a class="J_TurnRight" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-turnright"></span>向右转</a>
+    </div>
+    <div class="J_StageMain tb-r-photo-stage-main" style="padding-top: 0px; padding-bottom: 0px;">
+        <div class="tb-r-photo-stage-imgbox J_Imgbox" style="width: 300px; height: 400px;">
+            <img src="img/zheng.png" style="margin-left: 0px; margin-top: 0px;">
+        </div>
+    </div>
+</div>
+<div class="debug"></div>
+</body>
