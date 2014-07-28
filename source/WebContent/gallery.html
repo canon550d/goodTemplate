@@ -35,7 +35,7 @@ $(document).ready(function(){
         $(".tb-r-photo-viewer").removeClass(name+aid).addClass(name+0);
         aid = 0;
         rid = 0;
-        $(".tb-r-photo-stage-imgbox").children("img").attr("src", $(this).attr("src"));
+        $(".tb-r-photo-stage-imgbox").children("img").attr("style", "").attr("src", $(this).attr("src"));
         initPhoto();
     });
 
@@ -57,6 +57,7 @@ function getIndex(){
 //1是横着，2是竖着
 var hy = 1;
 function initPhoto(){
+	var widthMax = 500;
 	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
 	var longside = imgbox.width();
 	var shortside = imgbox.height();
@@ -67,23 +68,23 @@ function initPhoto(){
 		longside = shortsideCopy;
 		hx = 2;
 	}
+	if (longside > widthMax){
+		shortside = ((widthMax*shortside)/longside); console.info(widthMax +"*" +shortside + "/" + longside);
+		longside = widthMax;
+	}
 	var jian = (longside - shortside)/2;
 	var aaa,bbb,ccc = 0,ddd = 0;
 	if(hx == 1){// 横着
-		aaa = longside;
-		bbb = shortside;
-		ccc = 0;
-		ddd = 0;
+		aaa = longside + "px";
+		bbb = shortside + "px";
 	}else if(hx == 2){// 竖着
-		aaa = shortside;
-		bbb = longside;
-		ccc = 0;
-		ddd = 0;
+		aaa = shortside + "px";
+		bbb = longside + "px";
 	}
-	hy = hx;
+
 	$(".J_ViewStage").css("width",aaa);
 	$(".J_Imgbox").css({"width":aaa, "height":bbb});
-	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
+	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd, "width":aaa,"height":bbb});
 }
 
 function photo(){
@@ -150,8 +151,9 @@ function debug(){
     <img src="img/zheng2.png" class="pigu" />
     <img src="img/heads.png" class="pigu" />
     <img src="img/webwxgeticon.jpg" class="pigu" />
+    <img src="img/Tulips.jpg" class="pigu" />
 </div>
-<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;">
+<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;z-index:100;position:absolute;">
     <div class="tb-r-photo-viewer-bar" style="display:none;">
         <a class="J_Hide" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-hide"></span>收起</a>
         <a class="J_Open" target="_blank" href="../img/zheng.png"><span class="tb-r-photo-icon tb-r-photo-icon-open"></span>原图</a>
@@ -165,5 +167,6 @@ function debug(){
         </div>
     </div>
 </div>
+<div>123123</div>
 <div class="debug"></div>
 </body>
