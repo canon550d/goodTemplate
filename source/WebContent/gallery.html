@@ -13,18 +13,19 @@ $(document).ready(function(){
         rid = aid;
         aid++;
         getIndex();
-        debug();
+        photo();
         $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
     });
     $(".J_TurnLeft").click(function(){
         rid = aid;
         aid--;
         getIndex();
-        debug();
+        photo();
         $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
         
     });
     $(".pigu").click(function(){
+        $(".tb-r-photo-viewer").show();
         $(".tb-r-photo-viewer-bar").show();
         $(".tb-r-photo-stage-main").show();
         /*
@@ -39,6 +40,7 @@ $(document).ready(function(){
     });
 
     $(".J_Hide").click(function(){
+        $(".tb-r-photo-viewer").hide();
         $(".tb-r-photo-viewer-bar").hide();
         $(".tb-r-photo-stage-main").hide();
     });
@@ -149,7 +151,7 @@ function debug(){
     <img src="img/heads.png" class="pigu" />
     <img src="img/webwxgeticon.jpg" class="pigu" />
 </div>
-<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;">
+<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;">
     <div class="tb-r-photo-viewer-bar" style="display:none;">
         <a class="J_Hide" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-hide"></span>收起</a>
         <a class="J_Open" target="_blank" href="../img/zheng.png"><span class="tb-r-photo-icon tb-r-photo-icon-open"></span>原图</a>
