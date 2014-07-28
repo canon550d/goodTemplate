@@ -34,7 +34,8 @@ $(document).ready(function(){
         $(".tb-r-photo-viewer").removeClass(name+aid).addClass(name+0);
         aid = 0;
         rid = 0;
-        $(".tb-r-photo-stage-imgbox").children("img").attr("src", $(this).attr("src"));photo();
+        $(".tb-r-photo-stage-imgbox").children("img").attr("src", $(this).attr("src"));
+        initPhoto();
     });
 
     $(".J_Hide").click(function(){
@@ -51,32 +52,79 @@ function getIndex(){
 	}
 }
 
-var hy = 2;
-function photo(){
+//1是横着，2是竖着
+var hy = 1;
+function initPhoto(){
 	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
 	var longside = imgbox.width();
 	var shortside = imgbox.height();
+	var hx = 1;
 	if (shortside > longside){// 先判断图片本身是横着还是竖着,竖构图的情况
 		shortsideCopy = shortside;
 		shortside = longside;
 		longside = shortsideCopy;
-		hy = 2;
-	}else{ hy =1;}
+		hx = 2;
+	}
 	var jian = (longside - shortside)/2;
-	var aaa,bbb,ccc,ddd;
-	if(hy == 1){// 横着
+	var aaa,bbb,ccc = 0,ddd = 0;
+	if(hx == 1){// 横着
 		aaa = longside;
 		bbb = shortside;
-		ccc = jian+"px";
-		ddd = "-"+jian+"px";
-		hy = 2;
-	}else if(hy == 2){// 竖着
+		ccc = 0;
+		ddd = 0;
+	}else if(hx == 2){// 竖着
 		aaa = shortside;
 		bbb = longside;
 		ccc = 0;
 		ddd = 0;
-		hy = 1;
 	}
+	hy = hx;
+	$(".J_ViewStage").css("width",aaa);
+	$(".J_Imgbox").css({"width":aaa, "height":bbb});
+	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
+}
+
+function photo(){
+	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
+	var longside = imgbox.width();
+	var shortside = imgbox.height();
+	var hx = 1;
+	if (shortside > longside){// 先判断图片本身是横着还是竖着,竖构图的情况
+		shortsideCopy = shortside;
+		shortside = longside;
+		longside = shortsideCopy;
+		hx = 2;
+	}
+	var jian = (longside - shortside)/2;
+	var aaa,bbb,ccc,ddd;
+	if(hx == 2){
+		if(aid==1 || aid==3){
+			aaa = longside;
+			bbb = shortside;
+			ccc = jian+"px";
+			ddd = "-"+jian+"px";
+
+		}else if(aid==0 || aid==2){
+			aaa = shortside;
+			bbb = longside;
+			ccc = 0;
+			ddd = 0;
+		}
+	}else{
+		if(aid==1 || aid==3){
+			aaa = shortside;
+			bbb = longside;
+			ccc = "-"+jian+"px";
+			ddd = jian+"px";
+
+		}else if(aid==0 || aid==2){
+			aaa = longside;
+			bbb = shortside;
+			ccc = 0;
+			ddd = 0;
+		}
+	}
+
 	$(".J_ViewStage").css("width",aaa);
 	$(".J_Imgbox").css({"width":aaa, "height":bbb});
 	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
