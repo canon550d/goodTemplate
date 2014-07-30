@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <title>旋转图片</title>
-<script src="js/jquery-1.9.0.js"></script>
+<script src="js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript">
 var aid = 0;
 var rid = 0;
@@ -130,7 +130,19 @@ function photo(){
 
 	$(".J_ViewStage").css("width",aaa);
 	$(".J_Imgbox").css({"width":aaa, "height":bbb});
-	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
+	if($.browser.msie && $.browser.version <= 8){
+		if(aid==1 || aid==3){
+			$(".J_ViewStage").css("width",aaa);
+			$(".J_Imgbox").css({"width":aaa, "height":bbb});
+		}else if(aid==0 || aid==2){
+			$(".J_ViewStage").css("width",bbb);
+			$(".J_Imgbox").css({"width":bbb, "height":aaa});
+		}
+		
+	}else{
+		$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
+	}
+	//$(".J_Imgbox").children("img").css({"width":aaa,"height":bbb});
 }
 
 function debug(){
@@ -151,7 +163,7 @@ function debug(){
     <img src="img/zheng2.png" class="pigu" />
     <img src="img/heads.png" class="pigu" />
     <img src="img/webwxgeticon.jpg" class="pigu" />
-    <img src="img/Tulips.jpg" class="pigu" />
+    <img src="img/untitled.png" class="pigu" />
 </div>
 <div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;z-index:100;position:absolute;">
     <div class="tb-r-photo-viewer-bar" style="display:none;">
