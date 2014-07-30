@@ -98,19 +98,19 @@ function photo(){
 		longside = shortsideCopy;
 		hx = 2;
 	}
-	var jian = (longside - shortside)/2;
-	var aaa,bbb,ccc,ddd;
+	var jian = (imgbox.height() - imgbox.width())/2;
+	var aaa,bbb;
 	if(aid==1 || aid==3){
 		aaa = imgbox.height();//height
 		bbb = imgbox.width();
-		ccc = jian+"px";
-		ddd = "-"+jian+"px";
+		//ccc = jian+"px";
+		//ddd = "-"+jian+"px";
 
 	}else if(aid==0 || aid==2){
 		aaa = imgbox.width();//width
 		bbb = imgbox.height();
-		ccc = 0;
-		ddd = 0;
+		//ccc = 0;
+		//ddd = 0;
 	}
 /*
 	if(hx == 2){
@@ -152,11 +152,9 @@ function photo(){
 		
 	}else{
 		var ccc=0, ddd=0;
-		if((aid==1 || aid==3) && hx==1){
-
-		}else if((aid==1 || aid==3) && hx==2){
-			aaa = imgbox.height();
-			bbb = imgbox.width();
+		if(aid==1 || aid==3){
+			ccc = jian;
+			ddd = 0- jian;
 		}
 		$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
 	}
