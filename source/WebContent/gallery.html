@@ -100,49 +100,69 @@ function photo(){
 	}
 	var jian = (longside - shortside)/2;
 	var aaa,bbb,ccc,ddd;
+	if(aid==1 || aid==3){
+		aaa = imgbox.height();//height
+		bbb = imgbox.width();
+		ccc = jian+"px";
+		ddd = "-"+jian+"px";
+
+	}else if(aid==0 || aid==2){
+		aaa = imgbox.width();//width
+		bbb = imgbox.height();
+		ccc = 0;
+		ddd = 0;
+	}
+/*
 	if(hx == 2){
 		if(aid==1 || aid==3){
-			aaa = longside;
+			aaa = longside;//height
 			bbb = shortside;
-			ccc = jian+"px";
+			ccc = jian+"px";// height - width zhengshu,
 			ddd = "-"+jian+"px";
 
 		}else if(aid==0 || aid==2){
-			aaa = shortside;
+			aaa = shortside;//width
 			bbb = longside;
 			ccc = 0;
 			ddd = 0;
 		}
+
 	}else{
 		if(aid==1 || aid==3){
-			aaa = shortside;
+			aaa = shortside;//height
 			bbb = longside;
-			ccc = "-"+jian+"px";
+			ccc = "-"+jian+"px";//width - height zhengshu
 			ddd = jian+"px";
 
 		}else if(aid==0 || aid==2){
-			aaa = longside;
+			aaa = longside;//width
 			bbb = shortside;
 			ccc = 0;
 			ddd = 0;
 		}
 	}
-
-	$(".J_ViewStage").css("width",aaa);
-	$(".J_Imgbox").css({"width":aaa, "height":bbb});
+*/
 	if($.browser.msie && $.browser.version <= 8){
 		if(aid==1 || aid==3){
-			$(".J_ViewStage").css("width",aaa);
-			$(".J_Imgbox").css({"width":aaa, "height":bbb});
+
 		}else if(aid==0 || aid==2){
-			$(".J_ViewStage").css("width",bbb);
-			$(".J_Imgbox").css({"width":bbb, "height":aaa});
+			aaa = imgbox.height();
+			bbb = imgbox.width();
 		}
 		
 	}else{
+		var ccc=0, ddd=0;
+		if((aid==1 || aid==3) && hx==1){
+
+		}else if((aid==1 || aid==3) && hx==2){
+			aaa = imgbox.height();
+			bbb = imgbox.width();
+		}
 		$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd});
 	}
-	//$(".J_Imgbox").children("img").css({"width":aaa,"height":bbb});
+	$(".J_ViewStage").css("width",aaa);
+	$(".J_Imgbox").css({"width":aaa, "height":bbb});
+
 }
 
 function debug(){
