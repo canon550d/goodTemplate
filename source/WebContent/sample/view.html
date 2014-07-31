@@ -7,12 +7,13 @@
 <link rel="stylesheet" type="text/css" href="../css/sidebar.css"/>
 <link rel="stylesheet" type="text/css" href="../css/toolbar.css"/>
 <style type="text/css">
+
 body, html{width:100%;height:100%;font-size: 12px;margin:0;padding:0;}
 body{background-image:url("../img/bg.jpg");background-size:cover;}
 .container{position:relative;width:960px;margin:0 auto;}
 
 .nav-box{position:absolute;width:160px;}
-.section{margin-left:154px;padding:0 0 0 10px;}
+.section{margin-left:153px;padding:0 0 0 10px;}
 .section-box{height:400px;background: none repeat scroll 0 0 white;border-bottom:2px solid #F4F3EF;}
 
 .w154{width:154px;margin:0 auto;}
@@ -22,11 +23,74 @@ body{background-image:url("../img/bg.jpg");background-size:cover;}
 .user-logout{margin-left:10px;}
 
 .logo{height: 31px;line-height: 31px;background: #fd7a7a;padding-left: 18px; font-size: 14px; font-weight: bold;color: #FFF;}
+
+.xy_search_submit{
+    background: none repeat scroll 0 0 #ff9934;
+    border: medium none;
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    padding: 0;
+    width: 36px;
+
+}
+.xy_search_text{
+    margin: 0;
+    padding:0;
+    background-color: #ffffff;
+    background-position: -808px -31px;
+    border-color: #F3D8CE;
+    border-style: solid none solid solid;
+    border-width: 2px medium 2px 2px;
+    color: #777777;
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 3px;
+    width: 111px;/*94*/
+}
+.xy_search_box{
+    width:152px;/*135*/
+    height:32px;
+    padding:0;
+    margin:1px auto;
+    background-color: #ff9934;
+}
+.xy_search_box:after{
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.logo_search{
+    background-color: #f9f9f9;width:142px;display:none;
+}
+.logo_search_inputbox{
+    background-color: #ff9934;border-left:2px solid white;
+}
+.logo_search_inputbox input{
+    width:100px;height: 27px;line-height: 27px;margin: 0;padding:0;
+    border-color: #ff9934;
+    border-style: solid none solid solid;
+    border-width: 2px medium 2px 2px;
+}
 </style>
 <script>
     $(document).ready(function(){
         $(".close").click(function(){
             $(".panel-body").toggle("normal");
+        });
+        $(".logo").click(function(){
+            $(".logo_name").toggle();
+            $(".logo_search").toggle();
         });
     });
 </script>
@@ -36,13 +100,26 @@ body{background-image:url("../img/bg.jpg");background-size:cover;}
     <div class="container">
         
         <div class="nav-box">
+
             <div class="user w154">
                 <div class="user-head"><img src="../img/heads.png"/></div>
-                <div class="user-name">铃响香馨<a href="#" class="user-logout">退出</a></div>
+                <div class="user-name">王大锤<a href="#" class="user-logout">退出</a></div>
             </div>
-            <div class="logo">世界杯A组的</div>
+            <div class="logo">
+                <span class="logo_name">演播大厅</span>
+                <div class="logo_search">
+                    <div class="logo_search_inputbox">
+                        <input type="text" />搜索
+                    </div>
+                </div>
+            </div>
+            <div style="background-color: #f9f9f9;border-left:1px solid #e3e3e3;border-right:1px solid #e3e3e3;" class="w154">
+                <div class="xy_search_box">
+                    <input type="submit" class="xy_search_submit" value="搜索"><input type="text" class="xy_search_text"/>
+                </div>
+            </div>
             <dl class=" nav nav-list w154"><!-- class="leftMenu" -->
-              <!-- dt class="nav-title">世界杯A组的</dt -->
+              <!-- <dt class="nav-title"></dt>  -->
               <dd><a target="_self" href="#">阿拉伯</a></dd>
         
               <dt class="nav-half-title">第三世界</dt>
