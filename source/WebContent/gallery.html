@@ -13,14 +13,14 @@ $(document).ready(function(){
         rid = aid;
         aid++;
         getIndex();
-        photo();
+        reSizePhoto();
         $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
     });
     $(".J_TurnLeft").click(function(){
         rid = aid;
         aid--;
         getIndex();
-        photo();
+        reSizePhoto();
         $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
         
     });
@@ -55,93 +55,42 @@ function getIndex(){
 }
 
 //1是横着，2是竖着
-var hy = 1;
 function initPhoto(){
-	var widthMax = 500;
+	var widthMax = 500, heightMax = 500;
 	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
-	var longside = imgbox.width();
-	var shortside = imgbox.height();
-	var hx = 1;
-	if (shortside > longside){// 先判断图片本身是横着还是竖着,竖构图的情况
-		shortsideCopy = shortside;
-		shortside = longside;
-		longside = shortsideCopy;
-		hx = 2;
+	var width = imgbox.width();
+	var height = imgbox.height();
+
+	if (width > widthMax){
+		height = ((widthMax*height)/width);
+		width = widthMax;
+	}else if(heightMax > heightMax){
+		height = heightMax;
+		width = ((heightMax*width)/height);
 	}
-	if (longside > widthMax){
-		shortside = ((widthMax*shortside)/longside); console.info(widthMax +"*" +shortside + "/" + longside);
-		longside = widthMax;
-	}
-	var jian = (longside - shortside)/2;
+
 	var aaa,bbb,ccc = 0,ddd = 0;
-	if(hx == 1){// 横着
-		aaa = longside + "px";
-		bbb = shortside + "px";
-	}else if(hx == 2){// 竖着
-		aaa = shortside + "px";
-		bbb = longside + "px";
-	}
+	aaa = width + "px"; //width
+	bbb = height + "px"; //height
 
 	$(".J_ViewStage").css("width",aaa);
 	$(".J_Imgbox").css({"width":aaa, "height":bbb});
 	$(".J_Imgbox").children("img").css({"margin-left":ccc, "margin-top":ddd, "width":aaa,"height":bbb});
 }
 
-function photo(){
+function reSizePhoto(){
 	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
-	var longside = imgbox.width();
-	var shortside = imgbox.height();
-	var hx = 1;
-	if (shortside > longside){// 先判断图片本身是横着还是竖着,竖构图的情况
-		shortsideCopy = shortside;
-		shortside = longside;
-		longside = shortsideCopy;
-		hx = 2;
-	}
+
 	var jian = (imgbox.height() - imgbox.width())/2;
 	var aaa,bbb;
 	if(aid==1 || aid==3){
 		aaa = imgbox.height();//height
 		bbb = imgbox.width();
-		//ccc = jian+"px";
-		//ddd = "-"+jian+"px";
-
 	}else if(aid==0 || aid==2){
 		aaa = imgbox.width();//width
 		bbb = imgbox.height();
-		//ccc = 0;
-		//ddd = 0;
 	}
-/*
-	if(hx == 2){
-		if(aid==1 || aid==3){
-			aaa = longside;//height
-			bbb = shortside;
-			ccc = jian+"px";// height - width zhengshu,
-			ddd = "-"+jian+"px";
 
-		}else if(aid==0 || aid==2){
-			aaa = shortside;//width
-			bbb = longside;
-			ccc = 0;
-			ddd = 0;
-		}
-
-	}else{
-		if(aid==1 || aid==3){
-			aaa = shortside;//height
-			bbb = longside;
-			ccc = "-"+jian+"px";//width - height zhengshu
-			ddd = jian+"px";
-
-		}else if(aid==0 || aid==2){
-			aaa = longside;//width
-			bbb = shortside;
-			ccc = 0;
-			ddd = 0;
-		}
-	}
-*/
 	if($.browser.msie && $.browser.version <= 8){
 		if(aid==1 || aid==3){
 
@@ -149,7 +98,6 @@ function photo(){
 			aaa = imgbox.height();
 			bbb = imgbox.width();
 		}
-		
 	}else{
 		var ccc=0, ddd=0;
 		if(aid==1 || aid==3){
