@@ -61,12 +61,12 @@ function initPhoto(){
 	var width = imgbox.width();
 	var height = imgbox.height();
 
-	if (width > widthMax){
+	if (width > height){
 		height = ((widthMax*height)/width);
 		width = widthMax;
-	}else if(heightMax > heightMax){
-		height = heightMax;
+	}else if(height > width){
 		width = ((heightMax*width)/height);
+		height = heightMax;
 	}
 
 	var aaa,bbb,ccc = 0,ddd = 0;
@@ -130,6 +130,7 @@ function debug(){
     <img src="img/heads.png" class="pigu" />
     <img src="img/webwxgeticon.jpg" class="pigu" />
     <img src="img/untitled.png" class="pigu" />
+
 </div>
 <div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;z-index:100;position:absolute;">
     <div class="tb-r-photo-viewer-bar" style="display:none;">
