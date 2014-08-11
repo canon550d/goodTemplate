@@ -19,3 +19,11 @@
 .nav-list-more{border-top: 1px solid #F4F3EF;}
 .nav-title{height: 31px;line-height: 31px;background: #F9F9F9;padding-left: 18px; font-size: 14px; font-weight: bold;color: #999999; border-bottom: 1px solid #E3E3E3;}
 .nav-half-title{line-height: 28px;padding-left: 18px;border-top: 1px solid #F4F3EF;color: #999999;background-color: #FFF;}/*副标题*/
+
+.nav-list b{display:inline-block;width:18px;height:17px;line-height:17px;vertical-align: -5px;margin:0;padding:0;}
+.nav-list-default{background:url("../img/gt_001.png") no-repeat -301px -47px;}
+.nav-list-img1{background:url("../img/gt_001.png") no-repeat -374px -12px;}
+.nav-list-img2{background:url("../img/gt_001.png") no-repeat -338px -12px;}
+.nav-list-img3{background:url("../img/gt_001.png") no-repeat -122px -47px;}
+.nav-list-img4{background:url("../img/gt_001.png") no-repeat -86px -47px;}
+.nav-list-img5{background:url("../img/gt_001.png") no-repeat -158px -47px;}
