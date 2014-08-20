@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="goodTemplate" default="template" basedir=".">
+	<description>goodTemplate</description>
+
+
+	<property name="web.dir" location="${basedir}/WebContent" />
+	<!-- /打包的路径/ -->
+	<property name="dist.dir" location="${basedir}/dist" />
+	<!-- /yuicompressor/ -->
+	<property name="yuicompressor.path" location="${basedir}/yuicompressor/yuicompressor-2.4.7pre.jar" />
+
+	<!-- /css路径/ -->
+	<property name="css.path" location="${web.dir}/css" />
+	<!-- /js路径/ -->
+	<property name="js.path" location="${web.dir}/js" />
+
+	<target name="template">
+		<concat destfile="${dist.dir}/all.css">
+			<fileset dir="${css.path}" includes="*.css" />
+		</concat>
+		<replace file="${dist.dir}/all.css" value="">
+			<replacetoken>@charset "utf-8";</replacetoken>
+		</replace>
+	</target>
+
+	<!-- CSS Compress -->
+	<target name="minify-css">
+		<apply executable="java" verbose="true" dest="${dist.dir}/" failonerror="true" parallel="false">
+			<fileset dir="${dist.dir}" includes="*.css" />
+			<arg line="-jar" />
+			<arg path="${yuicompressor.path}" />
+			<arg line="--charset utf-8" />
+			<arg value="--type" />
+			<arg value="css" />
+			<arg value="-o" />
+			<targetfile />
+			<mapper type="glob" from="*.css" to="*.min.css" />
+		</apply>
+	</target>
+</project>
