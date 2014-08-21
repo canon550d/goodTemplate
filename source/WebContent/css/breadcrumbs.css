@@ -1,4 +1,4 @@
 @charset "utf-8";
-.box{border:1px solid #bfbfbf;padding:5px 10px;}
-.crumbs{padding: 8px 15px;margin: 0px 0px 20px;list-style: none outside none;background-color: rgb(245, 245, 245);}
-.crumbs a{color: rgb(0, 136, 204);text-decoration: none;}
+.gt_box{border:1px solid #bfbfbf;padding:5px 10px;}
+.gt_crumbs{padding: 8px 15px;margin: 0px 0px 20px;list-style: none outside none;background-color: rgb(245, 245, 245);}
+.gt_crumbs a{color: rgb(0, 136, 204);text-decoration: none;}

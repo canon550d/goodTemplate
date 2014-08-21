@@ -1,8 +1,8 @@
-.tb-r-photo-stage-main {
+.gt-r-photo-stage-main {
 	position: relative;
 }
 
-.tb-r-photo-stage-main img {
+.gt-r-photo-stage-main img {
 	position: absolute;
 	/*
 	left: 0;
@@ -10,12 +10,12 @@
 	*/
 }
 
-.tb-r-photo-stage-imgbox {
+.gt-r-photo-stage-imgbox {
 	position: relative;
 	/* margin: 0 auto;*/
 }
 
-.tb-r-photo-viewer {
+.gt-r-photo-viewer {
     background: none repeat scroll 0 0 #fff;
     border: 1px solid #ccc;
     float: left;
@@ -25,12 +25,12 @@
     position: relative;
 }
 
-.tb-rotating-1 .tb-r-photo-stage-main img {
+.gt-rotating-1 .gt-r-photo-stage-main img {
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
 	-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1)
 }
 
-:root .tb-rotating-1 .tb-r-photo-stage-main img {
+:root .gt-rotating-1 .gt-r-photo-stage-main img {
 	filter: none;
 	-ms-filter: none;
 	-moz-transform: rotate(90deg);
@@ -40,12 +40,12 @@
 	transform: rotate(90deg)
 }
 
-.tb-rotating-2 .tb-r-photo-stage-main img {
+.gt-rotating-2 .gt-r-photo-stage-main img {
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 	-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
 }
 
-:root .tb-rotating-2 .tb-r-photo-stage-main img {
+:root .gt-rotating-2 .gt-r-photo-stage-main img {
 	filter: none;
 	-ms-filter: none;
 	-moz-transform: rotate(180deg);
@@ -55,12 +55,12 @@
 	transform: rotate(180deg)
 }
 
-.tb-rotating-3 .tb-r-photo-stage-main img {
+.gt-rotating-3 .gt-r-photo-stage-main img {
 	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 	-ms-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3)
 }
 
-:root .tb-rotating-3 .tb-r-photo-stage-main img {
+:root .gt-rotating-3 .gt-r-photo-stage-main img {
 	filter: none;
 	-ms-filter: none;
 	-moz-transform: rotate(270deg);
@@ -70,7 +70,7 @@
 	transform: rotate(270deg)
 }
 
-#reviews .tb-r-info {
+#reviews .gt-r-info {
 	float: left;
 	font-size: 12px;
 	color: #b0b0b0

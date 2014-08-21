@@ -1,10 +1,10 @@
 @charset "utf-8";
-.contacts{
+.gt_contacts{
 	margin:0;
 	padding:0;
 	font-size: 14px;
 }
-.contacts li{
+.gt_contacts li{
 	height:44px;
 	background-color:#CCC;
 	margin-top:2px;
@@ -13,48 +13,52 @@
 	list-style-type:none;
 }
 
-.contacts .d1-3{
+.gt_contacts .d1-3{
 	float:left;
 	margin-right:10px;
 }
 
-.contacts img{
+.gt_contacts img{
 	width:42px;
 	height:42px;
 	border: 1px solid #fff;
 }
 
-.contacts .info{
+.gt_contacts .info{
 	width:171px;
 	float:left;
 	height:50px;
 	font: inherit;
 }
-.contacts .info .nickname{
+.gt_contacts .info .nickname{
 	height:24px;
 	width: 171px;
 	line-height:25px;
 	
 }
 
-.people{
+.gt_contacts .people{
 	padding:7px 10px;
 }
-.people img{
+.gt_contacts .people img{
 	width:60px;
 	height:60px;
 	border: 1px solid #fff;
 }
-.info{
+.gt_contacts .info2{
 	margin:0;
 }
-.info li{
+.gt_contacts .info2 li{
 	border-top:1px solid #CCC;
 	height:30px;
 	line-height:30px;
 	list-style-type:none;
+	background-color:#FFF;
+	font-size:16px;
+	margin:0;
+	padding:0;
 }
-.clr {
+.gt_contacts-clr {
 	clear: both;
 	height: 1px;
 	overflow: hidden;

@@ -7,42 +7,42 @@
 <script type="text/javascript">
 var aid = 0;
 var rid = 0;
-var name = "tb-rotating-";
+var name = "gt-rotating-";
 $(document).ready(function(){
     $(".J_TurnRight").click(function(){
         rid = aid;
         aid++;
         getIndex();
         reSizePhoto();
-        $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
+        $(".gt-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
     });
     $(".J_TurnLeft").click(function(){
         rid = aid;
         aid--;
         getIndex();
         reSizePhoto();
-        $(".tb-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
+        $(".gt-r-photo-viewer").removeClass(name+rid).addClass(name+aid);
         
     });
     $(".pigu").click(function(){
-        $(".tb-r-photo-viewer").show();
-        $(".tb-r-photo-viewer-bar").show();
-        $(".tb-r-photo-stage-main").show();
+        $(".gt-r-photo-viewer").show();
+        $(".gt-r-photo-viewer-bar").show();
+        $(".gt-r-photo-stage-main").show();
         /*
         $("<img></img>").attr("src", $(this).attr("src"))
-            .appendTo(".tb-r-photo-stage-imgbox");
+            .appendTo(".gt-r-photo-stage-imgbox");
         */
-        $(".tb-r-photo-viewer").removeClass(name+aid).addClass(name+0);
+        $(".gt-r-photo-viewer").removeClass(name+aid).addClass(name+0);
         aid = 0;
         rid = 0;
-        $(".tb-r-photo-stage-imgbox").children("img").attr("style", "").attr("src", $(this).attr("src"));
+        $(".gt-r-photo-stage-imgbox").children("img").attr("style", "").attr("src", $(this).attr("src"));
         initPhoto();
     });
 
     $(".J_Hide").click(function(){
-        $(".tb-r-photo-viewer").hide();
-        $(".tb-r-photo-viewer-bar").hide();
-        $(".tb-r-photo-stage-main").hide();
+        $(".gt-r-photo-viewer").hide();
+        $(".gt-r-photo-viewer-bar").hide();
+        $(".gt-r-photo-stage-main").hide();
     });
 });
 function getIndex(){
@@ -57,7 +57,7 @@ function getIndex(){
 //1是横着，2是竖着
 function initPhoto(){
 	var widthMax = 500, heightMax = 500;
-	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
+	var imgbox = $(".gt-r-photo-stage-imgbox").children("img");
 	var width = imgbox.width();
 	var height = imgbox.height();
 
@@ -79,7 +79,7 @@ function initPhoto(){
 }
 
 function reSizePhoto(){
-	var imgbox = $(".tb-r-photo-stage-imgbox").children("img");
+	var imgbox = $(".gt-r-photo-stage-imgbox").children("img");
 
 	var jian = (imgbox.height() - imgbox.width())/2;
 	var aaa,bbb;
@@ -132,16 +132,16 @@ function debug(){
     <img src="img/untitled.png" class="pigu" />
 
 </div>
-<div class="tb-r-photo-viewer J_ViewStage tb-rotating-0" style="width: 297px;display:none;z-index:100;position:absolute;">
-    <div class="tb-r-photo-viewer-bar" style="display:none;">
-        <a class="J_Hide" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-hide"></span>收起</a>
-        <a class="J_Open" target="_blank" href="../img/zheng.png"><span class="tb-r-photo-icon tb-r-photo-icon-open"></span>原图</a>
-        <a class="J_TurnLeft" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-turnleft"></span>向左转</a>
-        <a class="J_TurnRight" href="#"><span class="tb-r-photo-icon tb-r-photo-icon-turnright"></span>向右转</a>
+<div class="gt-r-photo-viewer J_ViewStage gt-rotating-0" style="width: 297px;display:none;z-index:100;position:absolute;">
+    <div class="gt-r-photo-viewer-bar" style="display:none;">
+        <a class="J_Hide" href="#"><span class="gt-r-photo-icon gt-r-photo-icon-hide"></span>收起</a>
+        <a class="J_Open" target="_blank" href="../img/zheng.png"><span class="gt-r-photo-icon gt-r-photo-icon-open"></span>原图</a>
+        <a class="J_TurnLeft" href="#"><span class="gt-r-photo-icon gt-r-photo-icon-turnleft"></span>向左转</a>
+        <a class="J_TurnRight" href="#"><span class="gt-r-photo-icon gt-r-photo-icon-turnright"></span>向右转</a>
     </div>
 
-    <div class="J_StageMain tb-r-photo-stage-main" style="padding--top: 0px; padding-bottom: 0px;">
-        <div class="tb-r-photo-stage-imgbox J_Imgbox" style="width: 297px; height: 400px;">
+    <div class="J_StageMain gt-r-photo-stage-main" style="padding--top: 0px; padding-bottom: 0px;">
+        <div class="gt-r-photo-stage-imgbox J_Imgbox" style="width: 297px; height: 400px;">
             <img src="img/zheng.png" style="margin-left: 0px; margin-top: 0px;">
         </div>
     </div>

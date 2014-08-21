@@ -1,29 +1,29 @@
 @charset "utf-8";
-#toolbar{
+#gt_toolbar{
 	right: 0px; top: 0px; bottom: 0px; position: fixed; z-index: 5010;
 	width: 35px;
 	background-color: #000;
 }
 
-.close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
+.gt_close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
 
-.xyTop, .xyBottom{background:white;display:block;width:33px;height:33px;position: fixed;right:1px;}
-.xyTop{bottom:35px;}
-.xyBottom{bottom:1px;}
-.xyTop img , .xyEnd img{width:33px;height:33px;}
+.gt_top, .gt_bottom{background:white;display:block;width:33px;height:33px;position: fixed;right:1px;}
+.gt_top{bottom:35px;}
+.gt_bottom{bottom:1px;}
+.gt_top img , .gt_end img{width:33px;height:33px;}
 
-.workbill-search{
+.gt_toolbar_list{
 	width: 240px;height: 736px;
 	top: 20px;right: 0px;position: fixed;  z-index: 5009;
 	overflow: hidden;
 	background: none repeat scroll 0% 0% #FAFAFA;
 	border:1px solid black;
 }
-.workbill-search ul{
+.gt_toolbar_list ul{
 	margin:0;
 	padding:0;
 }
-.workbill-search li{
+.gt_toolbar_list li{
 	margin-left:8px;
 	margin-top:4px;
 	list-style-type:none;
@@ -36,13 +36,13 @@
  * 测试代码，没有实际使用的
  * 
  */
-.toolbar{
+.gt_toolbar{
 	width:18px;
 	height:18px;
 	
 	background-color:#F4F3EF;
 }
-.toolbar:hover{
+.gt_toolbar:hover{
 	width:23px;
 	height:23px;
 	margin-top:-5px;
