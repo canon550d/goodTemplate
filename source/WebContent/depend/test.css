@@ -1,0 +1,60 @@
+/*
+ * 也就php里有用到，测试也就一个页面用到
+ */
+table ,tr,td{border:1px solid gray;width:100%;}
+
+.container_12,
+.container_16,
+.container_24 {
+  background-color: #fff;
+  background-repeat: repeat-y;
+  margin-bottom: 20px;
+}
+.container_12 {
+  background-image: url(../img/12_col.gif);
+  /*background-image: url(../img/12_col.png);*/
+}
+
+.container_16 {
+  /*background-image: url(../img/16_col.gif);*/
+  /*background-image: url(../img/16_col.png);*/
+}
+
+.container_24 {
+  background-image: url(../img/24_col.gif);
+}
+
+.xyx-1{background-color: #99CCCC;}
+.xyx-2{background-color: #FFFF99;}
+.xyx-3{background-color: #CC99CC;}
+.mui-mbar-tabs-mask {
+  position: fixed;  z-index: 5010;
+  /*position: absolute;*/
+  top: 1px;
+  bottom: 0px;
+  right: 0px;
+  width: 35px;
+  background-color: #000;
+}
+.ssss{width: 228px;height: 736px;
+  position: fixed;  z-index: 5009;
+  top: 20px;right: 0px;
+  overflow: hidden;background: none repeat scroll 0% 0% #FAFAFA;border:1px solid black;}
+.ssss ul{
+  margin:0;
+  padding:0;
+}
+.ssss li{
+  margin-left:8px;
+  margin-top:4px;
+  list-style-type:none;
+  height:80px;
+  border-bottom:1px dashed black;
+}
+.close{margin-top:20px;width:33px;height:33px;background:white;display:block;}
+.xyTop{background:white;display:block;width:33px;height:33px;position: fixed;bottom:35px;right:1px;}
+.xyEnd{background:white;display:block;width:33px;height:33px;position: fixed;bottom:1px;right:1px;}
+.xyTop img , .xyEnd img{width:33px;height:33px;}
+
+.xyPanelTitle{background-color: rgb(245, 245, 245);}
+.xyPanelBody{background-color:white;}
