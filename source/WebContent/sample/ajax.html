@@ -3,19 +3,25 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>查看</title>
-<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/jquery-1.9.0.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#guanzhu").click(function(){
 		$.ajax({
 			dataType : "json",
 			url : "hello.html",
-			data : {'name':'2134'},
+			data : $("input[name='black.keyword']:checked").serialize() +"&"+ $("#black_message").serialize(),
 			complete : function() {
-				console.log("正在搞定");
+				/*
+				keyword.each(function(){
+					console.log($(this).val());
+				});
+				*/
+
+				//console.log("正在搞定");
 			},
 			success : function(response) {
-				console.log("插入成功");
+				//console.log("插入成功");
 			}
 		});
 	});
@@ -25,13 +31,13 @@ $(document).ready(function(){
 <body>
     <div>
        <span>关注</span>
-       <input type="checkbox" name="black.keyword" /><label>帐号</label>
-       <input type="checkbox" name="black.keyword" /><label>图片上证件号</label>
-       <input type="checkbox" name="black.keyword" /><label>联系手机</label>
-       <input type="checkbox" name="black.keyword" /><label>联系邮箱</label>
+       <input type="checkbox" name="black.keyword" value="帐号"/><label>帐号</label>
+       <input type="checkbox" name="black.keyword" value="图片上证件号"/><label>图片上证件号</label>
+       <input type="checkbox" name="black.keyword" value="联系手机"/><label>联系手机</label>
+       <input type="checkbox" name="black.keyword" value="联系邮箱"/><label>联系邮箱</label>
     </div>
     <div>
-        <textarea name="black.message"></textarea>
+        <textarea name="black.message" id="black_message"></textarea>
     </div>
     <div>
         <button type="button" id="guanzhu">确认关注</button>
