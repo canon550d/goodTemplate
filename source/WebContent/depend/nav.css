@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*
+ * 已经没人用了，丢这吧
+ */
+#nav{
+    background: #F4F3EF;
+    /*width: 155px;*/
+}
+
+.usInfo {
+  height: auto;
+  padding: 10px 0 0;
+}
+#loginUser{
+  height:20px;background:#FFF;width:100%;padding:3px;/* style.css中扒来的  */
+  width:120px;margin:8px 0;padding:2px 3px;
+}
+
+#searchTXT{
+  background-color: #FFFFFF;
+  background-position: -808px -31px;
+  border-color: #FF9934;
+  border-style: solid none solid solid;
+  border-width: 2px medium 2px 2px;
+  color: #777777;
+  height: 28px;line-height: 28px;
+  padding-left: 3px;
+  width: 97px;
+  border-radius: 0;
+  margin:0;padding:0;
+}
+
+#caosi{
+  background: none repeat scroll 0 0 #FF9934;
+  border: medium none;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 14px;font-weight: bold;
+  height: 32px;line-height: 32px;
+  padding: 0;
+  width: 24px;
+}
+
+/*
+左侧导航栏，因为nav已经被使用了，所以只能另取inav
+*/
+.inav {background-color: #FFFFFF;border: 1px solid #E3E3E3;box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;margin-bottom: 1px;min-height: 20px;list-style: none outside none;}
+.inav dd{line-height: 18px;margin-left: 0px;}/*内容*/
+.inav dd{color: #999999;}/*内容*/
+.inav dd a{display:block;padding: 6px 10px 6px 18px;}
+.inav dd a:hover{background:#F4F3EF; }
+
+.inav-list{margin-bottom: 10px;margin-top:0;}
+.nav-list-more{border-top: 1px solid #F4F3EF;}
+.inav-title{height: 31px;line-height: 31px;background: #F9F9F9;padding-left: 18px; font-size: 14px; font-weight: bold;color: #999999; border-bottom: 1px solid #E3E3E3;}
+.nav-half-title{line-height: 28px;padding-left: 18px;border-top: 1px solid #F4F3EF;color: #999999;background-color: #FFF;}/*副标题*/
