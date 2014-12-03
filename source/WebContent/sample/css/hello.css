@@ -1,0 +1,44 @@
+@CHARSET "GB2312";
+*{padding:0;margin:0;border:0;}
+html{border: 0 none;font-family: inherit;font-size: 100%;font-style: inherit;font-weight: inherit;}
+boby{color: #333;font-family: "SimSun ",Arial;font-size: 14px;}
+
+.logo {
+    background-position: left top;
+    /*background-image: url("../img/bg_sprites_v10.png");*/
+    height: 51px;
+    line-height: 51px;
+    margin-top: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    float: left;
+}
+.logo img{width: 178px;height: 51px;}
+.qianming{float: left;margin-top: 18px;margin-left: 20px;font-size:26px;}
+.qianming2{float: left;width:600px;vertical-align: bottom;}
+.clear{clear:both;}
+
+.header-w960{width:960px;margin:0 auto;position: relative;height: 28px;}
+.header-in{height: 28px;float:right;right: 0;padding-top:9px;}
+.header-in a{line-height: 28px;color: #464646;cursor: pointer;text-decoration: none;}
+
+.wraper{margin: 0 auto;max-width: 1800px;min-width: 1000px;}
+.header{background-color:#DFE9EB;}
+.top-meta{height:76px;width:960px;margin:0 auto;vertical-align:bottom;}
+
+.ul-nav{background-color:#016484;height:56px;margin-bottom: 30px;}
+.ul-nav ul{width:960px;list-style: outside none none;margin:0 auto;vertical-align: middle;}
+.ul-nav ul li{float: left;font-size: 0;line-height: 0;padding: 0 18px;}
+.ul-nav ul li a {color: #fff;font-size: 16px;height: 56px;line-height: 56px;vertical-align: middle;text-decoration: none;}
+.ul-nav .active{background: url("../img/wok.jpg") repeat-x center top;}
+.ul-nav .active a{color:#016484;}
+
+.main{width: 958px;margin:0 auto;border: 1px solid #cfdae1;min-height: 400px;}
+.main:after{clear:both;}
+
+.footer{width: 960px;margin: 25px auto 0;padding: 20px 0;clear:both;line-height: 26px;font-size: 14px;color: #959595;text-align: center;background: url("../img/foot-bg.jpg") no-repeat center top;}
+.footer .copyright{font-family:"arial";}
+.footer a, .footer a:visited {color: #666666;margin-left: 5px;}
+
+.help_area{/*float:left;*/position: fixed;right: 50%;top: 270px;margin-right: 480px;}
+.help_area img{border:0;}
