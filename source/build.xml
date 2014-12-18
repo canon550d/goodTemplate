@@ -15,10 +15,10 @@
 	<property name="js.path" location="${web.dir}/js" />
 
 	<target name="template">
-		<concat destfile="${dist.dir}/all.css">
+		<concat destfile="${dist.dir}/goodTemplate.css">
 			<fileset dir="${css.path}" includes="*.css" />
 		</concat>
-		<replace file="${dist.dir}/all.css" value="">
+		<replace file="${dist.dir}/goodTemplate.css" value="">
 			<replacetoken>@charset "utf-8";</replacetoken>
 		</replace>
 	</target>
