@@ -10,7 +10,16 @@
 .gt_table_1 .hc{background-color:#f2f2f2;border-bottom: 1px solid #cdcdcd;padding: 0 10px;margin-top: 1px;}
 .gt_table_1 .hc td,.gt_table_1 .mc th{height: 20px;}
 
+
+.gt_table_2 {}
+.gt_table_2 .title{background-color:#f5f5f5;}
+.gt_table_2 table{border-collapse:collapse;width: 100%;}
+.gt_table_2 tbody{margin-top:10px;}
+.gt_table_2 th{height: 40px;line-height: 40px;text-align: left}
+.gt_table_2 th, .gt_table_2 td{border: 1px solid #cdcdcd;}
+
 .h20{height: 20px;}
+.h20 td{border: 0 none;}
 
 .w80{width:80px;}
 .w170{width:170px;}
