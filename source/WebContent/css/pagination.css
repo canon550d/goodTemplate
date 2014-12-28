@@ -1,0 +1,135 @@
+@charset "utf-8";
+.pager{
+	float:right;
+	padding-top:6px;
+}
+.pager_top{
+	/* [估计是JS定位用的] */
+}
+.pager .page_list{
+	float:left;
+	background:#fff;
+	border-radius:4px;
+	box-shadow:0 1px 3px #bcbcbc;
+	padding:0 5px;
+}
+.pg{
+	display:inline;
+	float:left;
+	margin:5px;
+	*margin:5px 5px 5px 10px;
+	_margin:5px 5px 5px 10px;
+}
+.back_pg{
+	border-right:1px solid #e8e8e8;
+	margin:0;
+	padding:6px 0;
+}
+.px{
+	height:17px;
+}
+.nxt{
+	
+}
+/* ----------------------------------------- */
+.pg a,.pg strong,.pgb a,.pg label{
+	display:inline;
+	float:left;
+	border-radius:26px;
+	color:#333;
+	font-size:12px;
+	margin-left:5px;
+	overflow:hidden;
+	-webkit-transition:all linear .2s;
+	-moz-transition:all linear .2s;
+	-ms-transition:all linear .2s;
+	transition:all linear .2s;
+}
+.pg a,.pg strong,.pgb a,.pg label{
+	display:inline;
+	float:left;
+	border-radius:26px;
+	color:#333;
+	font-size:12px;
+	margin-left:5px;
+	overflow:hidden;
+	-webkit-transition:all linear .2s;
+	-moz-transition:all linear .2s;
+	-ms-transition:all linear .2s;
+	transition:all linear .2s;
+}
+
+.pg a,.pg strong,.pgb a{
+	background:#f3f3f3;
+	border:1px solid #f3f3f3;
+	padding:0 9px;
+	height:24px;
+}
+
+.pg a:hover,.pgb a:hover{
+	background-color:#fff;
+	border-color:#45abfa;
+	color:#43AAFA;
+}
+
+.pg a.nxt,.pg a.prev,.back_pg a{
+	background-image:url(../..//bbs_v4/images/bg_hor.png);
+	background-repeat:no-repeat;
+	background-position:-120px -388px;
+}
+.back_pg a{
+	background-color:transparent;
+	background-position:-150px -388px;
+	border:0;
+	border-radius:0;
+	padding:0 10px 0 15px;
+}
+
+.pg a.nxt,.pg a.prev{
+	line-height:99px;
+	padding:0;
+	width:24px;
+}
+
+.pg a.prev{
+	background-position:-144px -388px;
+}
+
+.pg strong{
+	background-color:#43AAFA;
+	border-color:#43AAFA;
+	color:#fff;
+}
+
+.pg label{
+	float:left;
+	color:#333;
+	cursor:text;
+	font-size:12px;
+	margin-left:5px;
+	padding:0 5px;
+}
+
+.pg label .px{
+	float:left;
+	background:#fff;
+	border:1px solid #e8e8e8;
+	border-radius:26px;
+	padding:4px 8px;
+	height:16px;
+	width:24px;
+	outline:0;
+	line-height:16px\9;
+}
+
+.pg label .px:focus{
+	border-color:#45abfa;
+}
+
+.pg label span{
+	float:left;
+	padding:2px 0 0 0.4em;
+}
+.pg,.pgb{
+	line-height:24px;
+}
