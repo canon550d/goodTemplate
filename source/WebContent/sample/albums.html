@@ -15,7 +15,9 @@
         <div>
           <div class="isClossTab">图片管理</div>
 
-          <el-menu router :class="'menu'" :default-openeds=["1"]
+          <el-menu router :class="'menu'" 
+                 :default-active="$route.path"
+                 :default-openeds=["1"]
                  class="el-menu-vertical-demo"
                  @select="handleSelect"
                  @open="handleOpen"
@@ -77,22 +79,33 @@
 <script src="https://unpkg.com/element-ui/lib/index.js"></script>
 <script>
 
-  const Home = { template: '<p>home page </p>' }
+  const Home = {
+        data: function() {
+          return {
+               //albums:[]
+          }
+        },
+        template: '<div></div>'
+        //template: '<el-row><el-col :span="4" v-for="(item,index) in albums" :key="item.path" :offset="index > 0 ? 2 : 0"><el-card ><el-image :src="item.images[0]" class="wocaoimg" style="width: 200px; height: 200px" fit="cover"></el-image><div style="padding: 14px;"><span>{{ item.description }}</span><div class="bottom clearfix"><time class="time">{{ item.time }}</time><router-link :to=" item.path">查看</router-link></div></div></el-card></el-col></el-row>'
+  }
+
   const Albums = {
         data: function() {
           return {
-            myimages: ['./img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg'],
+            myimages: [],
           }
         },
         mounted () {
-          console.info(this.$route.path);
+          this.myimages = this.partInfo;console.info(this.$route.path);
         },
         props:["partInfo"],
         
         watch:{
-            partInfo(){
-              console.info(this.partInfo);
-              this.myimages = this.partInfo;
+          $route(to, from) {
+              //console.info(this.$route.path +"|"+this.partInfo.length);
+          },
+          partInfo(){
+              this.myimages = this.partInfo;console.info(this.partInfo.length);
           }
         },
         
@@ -119,9 +132,9 @@
           
           //影集
           albums:[
-            {"name":"2020-11-12", "icon":"el-icon-folder", "description":"", "path":"/albums/2020-11-12", "time":"2020-11-13", 
+            {"name":"2020-11-12", "icon":"el-icon-folder", "description":"123", "path":"/albums/2020-11-12", "time":"2020-11-13", 
                 "images":['./img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg', './img/user1.h1.jpg', './img/user1.h2.jpg', './img/user1.h3.jpg']},
-            {"name":"2020-11-13", "icon":"el-icon-folder", "description":"", "path":"/albums/2020-11-13", "time":"2020-11-13",
+            {"name":"2020-11-13", "icon":"el-icon-folder", "description":"321", "path":"/albums/2020-11-13", "time":"2020-11-13",
                 "images":['./img/user1.h3.jpg', './img/user1.h2.jpg', './img/user1.h1.jpg']}
           ],
           //分页数据
@@ -140,12 +153,28 @@
         handleSelect(key, keyPath) {
           //console.info(key, keyPath);
           for (i in this.albums){
-            if(("/albums/"+this.albums[i].name) == key){
+            if((this.albums[i].path) == key){
               this.list = this.albums[i].images;
             }
           }
         }
 
+      },
+      mounted () {
+          for (i in this.albums){
+            if((this.albums[i].path) == this.$route.path){
+              this.list = this.albums[i].images;
+            }
+          }
+      },
+      watch: {
+        $route(to, from) {
+            for (i in this.albums){
+                if((this.albums[i].path) == this.$route.path){
+                  this.list = this.albums[i].images;
+                }
+              }
+        }
       },
       router,
       //render (h) { return h(this.ViewComponent) }
