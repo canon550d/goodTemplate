@@ -14,7 +14,8 @@
       <el-aside :width="tabWidth+'px'">
         <div>
           <div class="isClossTab">图片管理</div>
-          <el-menu router :class="'menu'"
+
+          <el-menu router :class="'menu'" :default-openeds=["1"]
                  class="el-menu-vertical-demo"
                  @select="handleSelect"
                  @open="handleOpen"
@@ -34,12 +35,8 @@
               <i :class="item.icon"></i>
               <span slot="title">{{item.label}}</span>
             </el-menu-item>  -->
-<el-submenu index="1-4">
-      <span slot="title">选项4</span>
-      <el-menu-item index="1-4-1">选项1</el-menu-item>
-    </el-submenu>
-
           </el-menu>
+
         </div>
       </el-aside>
       <el-container>
